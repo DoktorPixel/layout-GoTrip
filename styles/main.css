@@ -1,0 +1,164 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --container-width: 1270px;
+    --container-padding: 15px;
+    --secondary: rgba(15, 31, 28, 0.5);
+    --orange: #ff7c4e;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E5E5E5;
+    color: #0F1F1C;
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+
+.container-right {
+    padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+.container-left {
+    padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+.block {
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.header {
+    position: relative;
+    min-height: 940px;
+    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    padding-top: 44px;
+    color: #fff;
+}
+
+.header a {
+    color: inherit
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+
+    background-image: url(./../images/header/header_bottom.svg);
+    background-size: 100%;
+}
+
+.header_top {
+    margin-bottom: 86px;
+
+}
+
+.header_content {
+    max-width: 592px;
+
+}
+
+/* nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px;
+}
+
+
+
+.nav_list {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav_list a {
+    position: relative;
+}
+
+.nav_list a.active::after,
+.nav_list a:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: -6px;
+
+    display: block;
+    /* width: 35px; */
+    height: 4px;
+    background-color: #C4C4C4;
+    border-radius: 50px;
+}
+
+.nav_login {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+/* Logo */
+
+.logo {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Button  */
+
+.btn {
+    display: inline-block;
+    padding: 13px 44px;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    color: burlywood;
+    transition: color 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* header content */
+
+.header_content {}
+
+.header_badge {}
+
+.header_title {}
+
+.header_text {}
+
+.header_btn {}
